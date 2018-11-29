@@ -89,9 +89,9 @@ req.on('end', function() {
 // Define the handlers
 var handlers = {};
 
-// Ping handler
-handlers.hello = (data, callback) => {
-  callback(200, {message: 'Thank for your help'})
+// Route handler
+handlers.route = (data, callback) => {
+  callback(200, { message: 'Thank for your help' })
 };
 
 // Handler not found
@@ -101,5 +101,5 @@ handlers.notFound = (data, callback) => {
 
 // Define a request router
 var router = {
-  'hello': handlers.hello
+  'hello': handlers.route
 }
